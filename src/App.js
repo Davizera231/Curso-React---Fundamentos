@@ -1,7 +1,9 @@
 import './App.css';
 
 import cao from './assets/imagem1.jpg';
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         <img src={cao} alt="Cidade" />
       </div>
       <div>
+        <div>
+          <ListRender/>
+        </div>
         <ManageData />
       </div>
     </div>
