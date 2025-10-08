@@ -1,17 +1,15 @@
-import FirstComponent from './components/FirstComponent';
-import TemplateExpression from './components/TemplateExpression';
 import './App.css';
-import Events from './components/Events';
-import Challenge from './components/Challenge';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <TemplateExpression/>
-      <FirstComponent/>
-      <Events/>
-      <Challenge/>
+    <div className="App">      
       <h1>Fundamentos React</h1>
+      {/* Imagem em public */}
+      <div>
+        <img src="/logo192.png" alt="Logo" />
+      </div>
     </div>
   );
 }
