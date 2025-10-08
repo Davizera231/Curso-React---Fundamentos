@@ -1,6 +1,7 @@
 import './App.css';
 
 import cao from './assets/imagem1.jpg';
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <div>
         {/* Imagem em assets */}
         <img src={cao} alt="Cidade" />
+      </div>
+      <div>
+        <ManageData />
       </div>
     </div>
   );
