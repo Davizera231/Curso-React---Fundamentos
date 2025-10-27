@@ -3,6 +3,7 @@ import './App.css';
 import cao from './assets/imagem1.jpg';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import ConditionalRender from './components/ConditionalRender';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <ListRender/>
         </div>
         <ManageData />
+        <ConditionalRender/>
       </div>
     </div>
   );
