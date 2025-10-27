@@ -5,13 +5,22 @@ const ListRender = () => {
 
     const [list] = useState(['Matheus', 'João', 'Maria', 'Pedro']);
 
-    const [users] = useState([
+    
+
+    const [users, setUsers] = useState([
       { id: 1, name: 'Matheus', age: 30 },
       { id: 2, name: 'João', age: 25 },
       { id: 3, name: 'Maria', age: 28 },
-      { id: 4, name: 'Pedro', age: 22 },
     ]);
   
+    const deleterandom = () => {
+      const randomNumber = Math.floor(Math.random() * 4);
+
+      setUsers((prevUsers) =>{
+        return prevUsers.filter((user) => randomNumber !== user.id);
+      });
+    };
+
   return (
     <div>
         <ul>
@@ -26,6 +35,7 @@ const ListRender = () => {
               </li>
           ))}
         </ul>
+        <button onClick={deleterandom}>Delete Random User</button>
     </div>
   );
 }
