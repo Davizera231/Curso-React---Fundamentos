@@ -1,15 +1,10 @@
 import { useState } from "react";
 
 
-
-
-
 function ManageData() {
     let someData = 10;
 
     const [number, setNumber] = useState(15);
-
-
 
   return (
     <div>
