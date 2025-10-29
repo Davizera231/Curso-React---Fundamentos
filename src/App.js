@@ -5,6 +5,7 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
+import ComponentsDetails from './components/ComponentsDetails';
 import { useState } from 'react';
 
 
@@ -32,6 +33,13 @@ function App() {
         <ConditionalRender/>
         <ShowUserName
           name={userName}
+        />
+        {/* destructuring */}
+        <ComponentsDetails 
+          brand="Ferrari"
+          distance={1000}
+          color="Vermelho"
+
         />
       </div>
     </div>
