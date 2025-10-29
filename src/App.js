@@ -39,8 +39,21 @@ function App() {
           brand="Ferrari"
           distance={1000}
           color="Vermelho"
-
+          new_car={true}
         />
+        <ComponentsDetails 
+          brand="Kawasaki"
+          distance={500}
+          color="Verde"
+          new_car={false}
+        />
+        <ComponentsDetails 
+          brand="Honda"
+          distance={750}
+          color="Azul"
+          new_car={true}
+        />
+
       </div>
     </div>
   );
