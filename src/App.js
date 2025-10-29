@@ -14,6 +14,12 @@ function App() {
   const name = "Valores direto no componente";
   const [userName] = useState("Maria");
 
+  const cars = [
+    {id:1, brand:"Ferrari", color:"Vermelho", new_car:true, distance:1000},
+    {id:2, brand:"Kawasaki", color:"Verde", new_car:false, distance:500},
+    {id:3, brand:"Honda", color:"Azul", new_car:true, distance:750},
+  ];
+
   return (
     <div className="App">      
       <h1>Fundamentos React</h1>
@@ -53,6 +59,15 @@ function App() {
           color="Azul"
           new_car={true}
         />
+        {/* loop em array de objetos */}
+        {cars.map((car) => (
+          <ComponentsDetails
+            brand={car.brand}
+            distance={car.distance}
+            color={car.color}
+            new_car={car.new_car}
+          />
+        ))}
 
       </div>
     </div>
