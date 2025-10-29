@@ -4,9 +4,15 @@ import cao from './assets/imagem1.jpg';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ConditionalRender from './components/ConditionalRender';
+import ShowUserName from './components/ShowUserName';
+import { useState } from 'react';
 
 
 function App() {
+
+  const name = "Valores direto no componente";
+  const [userName] = useState("Maria");
+
   return (
     <div className="App">      
       <h1>Fundamentos React</h1>
@@ -24,6 +30,9 @@ function App() {
         </div>
         <ManageData />
         <ConditionalRender/>
+        <ShowUserName
+          name={userName}
+        />
       </div>
     </div>
   );
