@@ -6,8 +6,9 @@ import ManageData from './components/ManageData';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import ComponentsDetails from './components/ComponentsDetails';
-import { useState } from 'react';
+import {useState } from 'react';
 import Fragments from './components/Fragments';
+import Container from './components/Container';
 
 function App() {
 
@@ -72,6 +73,16 @@ function App() {
         <Fragments 
           props="Valor direto na propriedade"
         />
+        {/* Container */}
+        <Container myValue={190}>
+          <p>Este é um exemplo de children em <strong>Container</strong></p>
+          
+        </Container>
+
+         <Container myValue={190}>
+          <p>Teste 2</p>
+          
+        </Container>
       </div>
     </div>
   );
