@@ -7,11 +7,11 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import ComponentsDetails from './components/ComponentsDetails';
 import { useState } from 'react';
-
+import Fragments from './components/Fragments';
 
 function App() {
 
-  const name = "Valores direto no componente";
+ // const name = "Valores direto no componente";
   const [userName] = useState("Maria");
 
   const cars = [
@@ -68,7 +68,10 @@ function App() {
             new_car={car.new_car}
           />
         ))}
-
+        {/* Fragments */}
+        <Fragments 
+          props="Valor direto na propriedade"
+        />
       </div>
     </div>
   );
