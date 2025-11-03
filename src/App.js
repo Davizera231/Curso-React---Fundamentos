@@ -10,6 +10,10 @@ import {useState } from 'react';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction'; 
+import ChangeMessageState from './components/ChangeMessageState';
+import StateLift from './components/StateLift';
+import UserDetails from './components/UserDetails';
+
 
 function App() {
 
@@ -22,9 +26,21 @@ function App() {
     {id:3, brand:"Honda", color:"Azul", new_car:true, distance:750},
   ];
 
+  const pessoas = [
+    {nome:"Davi", age:10, profissao:"Desenvolvedor"},
+    {nome:"Ana", age:15, profissao:"Designer"},
+    {nome:"Carlos", age:28, profissao:"Gerente de Projetos"},
+  ];
+
   function showMessage(){
     console.log("Evento do componente pai!")
 
+  }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (message) => {
+    setMessage(message);
   }
 
   return (
@@ -98,9 +114,24 @@ function App() {
           
         </Container>
 
-       
+      {/** Um componente que eleva o estado para um componente pai */}
 
-
+      <StateLift  
+        msg={message}
+      />
+      <ChangeMessageState 
+      
+        handleMessage={handleMessage}
+      
+      />
+      
+      {pessoas.map((pessoa) => (
+          <UserDetails
+            nome={pessoa.nome}
+            age={pessoa.age}
+            profissao={pessoa.profissao}
+          />
+        ))}
 
       </div>
     </div>
