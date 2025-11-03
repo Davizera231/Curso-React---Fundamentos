@@ -9,6 +9,7 @@ import ComponentsDetails from './components/ComponentsDetails';
 import {useState } from 'react';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction'; 
 
 function App() {
 
@@ -20,6 +21,11 @@ function App() {
     {id:2, brand:"Kawasaki", color:"Verde", new_car:false, distance:500},
     {id:3, brand:"Honda", color:"Azul", new_car:true, distance:750},
   ];
+
+  function showMessage(){
+    console.log("Evento do componente pai!")
+
+  }
 
   return (
     <div className="App">      
@@ -63,6 +69,7 @@ function App() {
         {/* loop em array de objetos */}
         {cars.map((car) => (
           <ComponentsDetails
+            key={car.id}
             brand={car.brand}
             distance={car.distance}
             color={car.color}
@@ -73,6 +80,13 @@ function App() {
         <Fragments 
           props="Valor direto na propriedade"
         />
+
+         {/*Executar funcao*/}
+        <ExecuteFunction
+          func={showMessage}
+        />
+
+
         {/* Container */}
         <Container myValue={190}>
           <p>Este é um exemplo de children em <strong>Container</strong></p>
@@ -83,6 +97,11 @@ function App() {
           <p>Teste 2</p>
           
         </Container>
+
+       
+
+
+
       </div>
     </div>
   );
